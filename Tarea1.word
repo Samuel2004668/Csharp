@@ -1,0 +1,24 @@
+1. Referente elegido: Zork (1980)
+
+Zork es una aventura conversacional clásica. El jugador escribe comandos en lenguaje natural (ej. "abrir puerta", "coger espada") 
+y el juego responde con descripciones textuales y con un contexto de que es lo que esta pasando en el mundo o el entorno
+
+2. Mecánicas principales
+
+- comandos: interpreta frases simples + objeto y direcciones (norte, sur, este, oeste, arriba, abajo).
+- Mundo dividido en habitaciones: cada localización tiene una descripción, objetos y salidas.
+- Objetos e inventario: se pueden recoger, dejar, examinar y usar objetos para resolver puzles.
+- Puzles y eventos: segun que acciones realice el juegador se desencadenan cambios permanentes (abrir puertas, encender/apagar lámparas).
+- Estado global: el juego guarda la ubicación actual del juegador, objetos en inventario, puntuación, movimientos, estado de luces, etc.
+- Condiciones de victoria/derrota: ganar recolectando tesoros y depositándolos en la vitrina, o morir
+- Guardado/carga: permite guardar la partida y continuar después
+
+3. Relación con lo aprendido en clase (C# básico)
+
+Aunque el Zork original se programó con un lenguaje orientado a objetos, sus mecánicas se pueden simular usando solo variables y 
+condicionales vistas en clase.
+
+- Variables booleanas: representan estados como tieneLlave, puertaAbierta, lamparaEncendida
+- Strings: para el comando introducido por el usuario y las descripciones de las habitaciones
+- Operadores lógicos: && para combinar condiciones (ej. "estás en la habitación correcta Y tienes la llave")
+, || para comandos equivalentes (ej. norte), ! para negar ej. !puertaAbierta significa puerta cerrada

@@ -10,29 +10,28 @@ public class Program
 
         Console.WriteLine($"Hola, {nombre}, bienvenid@");
 
-        Console.WriteLine("Dime tu color favorito: azul, verde, morado, rojo");
-        string color = Console.ReadLine(); 
-		
-        Console.WriteLine("¿Sabes nadar? (si/no)");
+        Console.WriteLine("Dime tu color favorito (azul, verde, morado o rojo):");
+        string color = Console.ReadLine();
+
+        Console.WriteLine("¿Sabes nadar? (si/no):");
         string nadar = Console.ReadLine();
 
-        Console.WriteLine("¿Te gusta el chocolate? (si/no)");
+        Console.WriteLine("¿Te gusta el chocolate? (si/no):");
         string comida = Console.ReadLine();
 
-        Console.WriteLine("¿Te gusta cocinar? (si/no)");
+        Console.WriteLine("¿Te gusta cocinar? (si/no):");
         string pasaTiempo = Console.ReadLine();
 
         Console.WriteLine("¿Cuál es tu edad?");
         int edad = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("¿Te ejercitas? (si/no)");
+        Console.WriteLine("¿Te ejercitas? (escribe si/no):");
         string fisico = Console.ReadLine();
 
-        string personaje = "Indefinido"; 
+        string personaje = "Indefinido"; // Valor por defecto
 
-        // Asignación del rol según respuestas
-		
-        if (color == "rojo" && nadar == "si" && comida == "no" && pasaTiempo == "si" && edad >= 20 && fisico == "si")
+        // Asignación del rol según respuestas 
+        if (color == "rojo" && nadar == "si" && comida == "no" && pasaTiempo == "si" && edad >= 18 && fisico == "si")
         {
             personaje = "Guerrero";
         }
@@ -40,23 +39,27 @@ public class Program
         {
             personaje = "Explorador";
         }
-        else if (color == "morado" && nadar == "no" && comida == "si" && pasaTiempo == "no" && edad >= 22 && fisico == "no")
+        else if (color == "morado" && nadar == "no" && comida == "si" && pasaTiempo == "no" && edad >= 18 && fisico == "no")
         {
             personaje = "Mago";
         }
-        else if (color == "azul" && nadar == "si" && comida == "si" && pasaTiempo == "no" && edad >= 30 && fisico == "si")
+        else if (color == "azul" && nadar == "si" && comida == "si" && pasaTiempo == "no" && edad >= 18 && fisico == "si")
         {
             personaje = "Tanque";
         }
+        else
+        {
+            // Si no cumple ninguna, se asigna el rol por defecto
+            personaje = "Aldeano";
+        }
 
-        // Estadísticas por defecto
+        // Valores por defecto
         int velocidad = 0;
         int fuerza = 0;
         int inteligencia = 0;
         int resistencia = 0;
 
-        // Asignar estadísticas según el Rol
-		
+        // Estadísticas según el personaje
         if (personaje == "Guerrero")
         {
             velocidad = 70;
@@ -85,8 +88,15 @@ public class Program
             inteligencia = 40;
             resistencia = 80;
         }
+        else // Aldeano 
+        {
+            velocidad = 20;
+            fuerza = 20;
+            inteligencia = 20;
+            resistencia = 20;
+        }
 
-        // Mensaje final con el rol y las estadísticas
+        // Mensaje final
         Console.WriteLine($"¡Felcidades {nombre}, este es tu rol y estadísticas!");
         Console.WriteLine($"Rol: {personaje}");
         Console.WriteLine($"Velocidad: {velocidad}");

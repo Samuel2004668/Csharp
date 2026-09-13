@@ -53,48 +53,50 @@ public class Program
             personaje = "Aldeano";
         }
 
-        // Valores por defecto
+     // Switch 1: Estadísticas según el personaje
+		
         int velocidad = 0;
         int fuerza = 0;
         int inteligencia = 0;
         int resistencia = 0;
 
-        // Estadísticas según el personaje
-        if (personaje == "Guerrero")
-        {
-            velocidad = 70;
-            fuerza = 80;
-            inteligencia = 50;
-            resistencia = 100;
-        }
-        else if (personaje == "Explorador")
-        {
-            velocidad = 100;
-            fuerza = 70;
-            inteligencia = 60;
-            resistencia = 70;
-        }
-        else if (personaje == "Mago")
-        {
-            velocidad = 80;
-            fuerza = 20;
-            inteligencia = 100;
-            resistencia = 60;
-        }
-        else if (personaje == "Tanque")
-        {
-            velocidad = 40;
-            fuerza = 100;
-            inteligencia = 40;
-            resistencia = 80;
-        }
-        else 
-        {
-            velocidad = 20;
-            fuerza = 20;
-            inteligencia = 20;
-            resistencia = 20;
-        }
+		switch (personaje)
+		{
+		case "Guerrero":
+		velocidad = 70;
+        fuerza = 80;
+        inteligencia = 50;
+        resistencia = 100;
+        break;
+
+    	case "Exlporador":
+		velocidad = 100;
+        fuerza = 50;
+        inteligencia = 50;
+        resistencia = 30;
+        break;
+		
+		case "Mago":
+		velocidad = 80;
+        fuerza = 20;
+        inteligencia = 100;
+        resistencia = 20;
+        break;
+
+		case "Tanque":
+        velocidad = 40;
+        fuerza = 100;
+        inteligencia = 40;
+        resistencia = 80;
+        break;
+			
+		default:
+        velocidad = 20;
+        fuerza = 20;
+        inteligencia = 20;
+        resistencia = 20;
+        break;
+}
 
         // Mensaje final
         Console.WriteLine($"¡Felcidades {nombre}, este es tu rol y estadísticas!");
@@ -103,10 +105,10 @@ public class Program
         Console.WriteLine($"Fuerza: {fuerza}");
         Console.WriteLine($"Inteligencia: {inteligencia}");
         Console.WriteLine($"Resistencia: {resistencia}");
-        Console.WriteLine("Estas son tus herramientas:");
+		Console.WriteLine("Estas son tus herramientas:");
 		
 		
-		//Switch 1: Items
+		//Switch 2: Items
 		switch (personaje)
 		{
 			case "Guerrero":
@@ -129,28 +131,77 @@ public class Program
 					Console.WriteLine("Hoz, Pan, Llave maestra");
 				break;
 		}		
-		//Switch 2: Eleccion De Bendición
+		//Switch 3: Eleccion De Bendición
 				
-		Console.WriteLine("Esta es tu Bendición Unica");
-			string bendicion = "{personaje}";
-				
-				switch (bendicion)
-				{
-			case "	Guerrero":
-					Console.WriteLine("Bastion Divino: Defensa +20% y reducción de daño a aliados");
+		Console.WriteLine("Esta es tu Bendición Única");
+		
+	string bendicion = "";
+		
+		switch (personaje)
+		{
+		case "Guerrero":
+				bendicion = "Furia Sangrienta: Cuanto menos HP tengas, más daño infliges (hasta +35%).";
 			break;
-						
+
 			case "Explorador":
-				Console.WriteLine("Viento Veloz: +15% de velocidad de movimiento y +10% de evasión");
+				bendicion = "Viento Veloz: +15% de velocidad de movimiento y +10% de evasión";
 			break;
 			
 			case "Mago":
-				Console.WriteLine("Flujo Arcano: 30% de regeneracion de mana y +15% de efectividad al castear hechizos");
+				bendicion = "Flujo Arcano: 30% de regeneración de mana y +15% de efectividad al castear hechizos";
 			break;
-						
+
+			case "Tanque":
+				bendicion = "Bastion Divino: Defensa +20% y reducción de daño a aliados";
+			break;
+
+    default:
+        bendicion = "Trueque Dorado: Obtienes mejores precios en tiendas y acceso a comerciantes ocultos";
+        break;
+}
+		Console.WriteLine(bendicion);
+		
+		// Switch 4: Elección de misión inicial
+		Console.WriteLine($"Bienvenid@, {nombre} es hora de empezar tu aventura, ¿Que mision tomaras?");
+		Console.WriteLine("1. Bosque Sombrío");
+		Console.WriteLine("2. Cuevas de Cristal");
+		Console.WriteLine("3. Ruinas Antiguas");
+		
+		string mision = Console.ReadLine();
+		string recompensa = "";
+		int puntos = 0;
+		
+		switch (mision)
+		{
+			case "1":
+			case "Bosque Sombrío":
+				mision = "Bosque Sombrío";
+				recompensa = "50 de oro y una Poción de Vida";
+				puntos = +80;
+			break;
+			
+			case "2":
+			case "Cuevas de Cristal":
+				mision = "Cuevas de Cristal";
+				recompensa = "80 de oro y un Cristal Mágico";
+				puntos = +40;
+			break;
+
+			case "3":
+			case "Ruinas Antiguas":
+				mision = "Ruinas Antiguas";
+				recompensa = "120 de oro y un Mapa Antiguo";
+				puntos = +60;
+			break;
+			
 			default:
-				Console.WriteLine("Trueque Dorado: Obtienes mejores precios en tiendsa y acceso a comerciantes ocultos");
+				mision = "Aldea";
+				recompensa = "20 de oro y un Pan";
+				puntos = +10;
 			break;
 }
+		Console.WriteLine($"Has elegido: {mision}");
+		Console.WriteLine($"Recompensa obtenida: {recompensa}");
+		Console.WriteLine($"Puntos obtenidos: {puntos}");
 		}
     }

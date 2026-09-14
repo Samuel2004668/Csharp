@@ -46,7 +46,7 @@ public class Program
 			saltos[2] = 7;
 			
 			textos[3] = "Llegas a la esquina. 1) Tomar el camino conocido. 2) Tomar un atajo.";
-			saltos[3] = ; 
+			saltos[3] = 12; 
 		
 			textos[4] = "Caminas por la ruta de siempre, pasando la panadería.";
 			saltos[4] = 0;
@@ -58,28 +58,25 @@ public class Program
 			saltos[6] = 11; 
 
 			textos[7] = "El gato parece en guardia,. 1)Seguir tu camino y dejarlo ser. 2)Insistir en mimarlo.";
-			saltos[7] = 0;
+			saltos[7] = 8;
 		
 			textos[8] = "Cuando insistes en mimarlo, el gato se te lanza y te araña la cara. FINAL: NO LLEGASTE(Aveces es mejor no insistir...o vas a salir herid@).";
 			saltos[8] = 1;
 				
 			textos[9] = "Entras a la panaderia, la fila es larga y parece que tomara tiempo. 1)Salir y continuar tu camino. 2)Esperar pacientemente.";
-			saltos[9] = 9;
+			saltos[9] = 10;
 				
 			textos[10] = "Tras una hora de espera no te atendieron, habia demasiados clientes. FINAL: NO LLEGASTE(Y moriste de hambre).";
 			saltos[10] = 1;
 
-			textos[11] = "Tras una hora de espera no te atendieron, habia demasiados clientes. FINAL: NO LLEGASTE(Y moriste de hambre).";
-			saltos[11] = 1;
+			textos[11] = "Entras por el atajo. Al fondo hay una construcción bloqueando el paso.";
+			saltos[11] = 0;
 
-			textos[12] = "Entras por el atajo. Al fondo hay una construcción bloqueando el paso.";
-			saltos[12] = 0;
+			textos[12] = "1) Rodear por el andén. 2) Cruzar la calle rápidamente.";
+			saltos[12] = 13; 
 
-			textos[13] = "1) Rodear por el andén. 2) Cruzar la calle rápidamente.";
-			saltos[13] = 14; 
-
-			textos[14] = "Rodeas con cuidado y llegas a clase apenas a tiempo. FINAL: LLEGASTE(En regaño es mejor que una clase perdida ¿Verdad?).";
-			saltos[14] = 1; 
+			textos[13] = "Rodeas con cuidado y llegas a clase apenas a tiempo. FINAL: LLEGASTE(En regaño es mejor que una clase perdida ¿Verdad?).";
+			saltos[13] = 1; 
 
 			textos[15] = "Cruzas justo cuando pasa una moto. FINAL: NO LLEGASTE(Felicidades te atropellaron).";
 			saltos[15] = 1;

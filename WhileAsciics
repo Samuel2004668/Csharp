@@ -1,0 +1,68 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+		string[] dibujo = new string[3]; 
+
+		// Fila 0
+		char[] simbolosFila0     = { 'x' };
+		int[]  repeticionesFila0 = {  8  };
+
+		string fila0 = "";
+		int s0 = 0;
+		while ( s0 < simbolosFila0.Length)
+		{
+			int i0 = 0;
+			while (i0 < repeticionesFila0[s0])
+			{
+				fila0 += simbolosFila0[s0];
+				i0++;
+			}
+			s0++;
+		}
+		dibujo[0] = fila0;
+
+		// Fila 1
+		char[] simbolosFila1     = { 'x', 'O', 'x', 'O', 'x' };
+		int[]  repeticionesFila1 = {  2 ,  1 ,  2 ,  1 ,  2  };
+
+		string fila1 = "";
+		int s1 = 0;
+		while (s1 < simbolosFila1.Length)
+		{
+			int i1 = 0;
+			while (i1 < repeticionesFila1[s1])
+			{
+				fila1 += simbolosFila1[s1];
+				i1++;
+			}
+			s1++;
+		}
+		dibujo[1] = fila1;
+
+		// Fila 2
+		char[] simbolosFila2     = { 'x', '(', '-', ')', 'x' };
+		int[]  repeticionesFila2 = {  2 ,  1 ,  2 ,  1 ,  2  };
+
+		string fila2 = "";
+		int s2 = 0;
+		while (s2 < simbolosFila2.Length)
+		{
+			int i2 = 0;
+			while (i2 < repeticionesFila2[s2])
+			{
+				fila2 += simbolosFila2[s2];
+				i2++;
+			}
+			s2++;
+		}
+		dibujo[2] = fila2;
+
+		foreach (string filaDelDibujo in dibujo)
+		{
+			Console.WriteLine(filaDelDibujo);
+		}
+	}	
+}

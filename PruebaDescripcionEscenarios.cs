@@ -17,7 +17,7 @@ class Mansion : Escenario
 {
     public Mansion()
     {
-        descripcion = "Llegas a la mansion en El Poblado. Las luces de la policia tinen los jardines de azul y amarillo. En el salon, Michael fuma junto a la ventana. Andrew te observa desde el sofa con los brazos cruzados. Un policia uniformado toma notas cerca de la puerta.";
+        descripcion = "Llegas a la mansion de un importante maganate en El Poblado. Las luces de la policia iluminan los jardines de azul y rojo. En el salon, Michael fuma junto a la ventana. Andrew te observa desde el sofa con los brazos cruzados. Un policia uniformado toma notas cerca de la puerta.";
         cantidadNpc = 3;
     }
 }
@@ -26,7 +26,7 @@ class Joyeria : Escenario
 {
     public Joyeria()
     {
-        descripcion = "Bajas del taxi frente a la joyeria. El letrero dorado dice Joyas del Valle. La vitrina principal esta tapada con una lona. Detras del mostrador, Lucy limpia la misma vitrina una y otra vez. Joseph hojea un folder junto a la caja. Un asistente joven ordena herramientas con las manos temblorosas.";
+        descripcion = "Bajas del taxi frente a la joyeria. El letrero dorado dice Joyas del Valle. La vitrina principal esta tapada con una lona. Detras del mostrador, Lucy limpia la misma vitrina una y otra vez. Joseph hojea un folder junto a la caja. La asistente joven ordena herramientas con las manos temblorosas.";
         cantidadNpc = 3;
     }
 }
